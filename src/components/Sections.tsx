@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const fadeInUp = {
   initial: { opacity: 0, y: 60, filter: "blur(10px)" },
   whileInView: { opacity: 1, y: 0, filter: "blur(0px)" },
-  transition: { duration: 0.8, ease: "easeOut" },
+  transition: { duration: 0.8, ease: "easeOut" as const },
 };
 
 
@@ -125,7 +125,7 @@ export function FinalCTASection() {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: "easeOut" as const }}
         className="space-y-12"
       >
         <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tight leading-none italic">
